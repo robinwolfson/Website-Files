@@ -107,7 +107,8 @@ details p { margin: .6rem 0 0; }
 @media (min-width: 960px) {
   .hero { padding: 4rem 0; }
   .hero-inner { grid-template-columns: 1.2fr 1fr; }
-  .grid, .preview-grid { grid-template-columns: repeat(3, 1fr); }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .preview-grid { grid-template-columns: repeat(3, 1fr); }
   .callout-inner { grid-template-columns: 320px 1fr; }
   .footer-inner { grid-template-columns: 1fr auto; align-items: center; }
   .copyright { grid-column: 1 / -1; }
