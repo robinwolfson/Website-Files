@@ -70,6 +70,9 @@ h3 { font-size: 1.2rem; }
 .features li { margin-bottom: .4rem; }
 .features li::marker { color: var(--accent-dark); }
 .note { font-size: .85rem; color: var(--muted); margin: 0 0 1rem; }
+.classroom-cue { margin: .9rem 0 0; text-align: center; font-weight: 700; }
+.classroom-cue a { color: var(--navy); text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .18em; }
+#classroom-license { scroll-margin-top: 5.5rem; }
 .bundle-featured { border: 3px solid var(--accent); }
 .ribbon { position: absolute; top: 1rem; left: 1rem; margin: 0; background: var(--accent); color: var(--navy); font-weight: 800; font-size: .85rem; padding: .25rem .7rem; border-radius: 999px; z-index: 1; }
 
@@ -106,7 +109,9 @@ details p { margin: .6rem 0 0; }
 @media (min-width: 960px) {
   .hero { padding: 4rem 0; }
   .hero-inner { grid-template-columns: 1.2fr 1fr; }
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: repeat(6, 1fr); }
+  .grid > .card { grid-column: span 2; }
+  .grid > .card-revit { grid-column: span 3; }
   .preview-grid { grid-template-columns: repeat(3, 1fr); }
   .bundle-grid { grid-template-columns: repeat(3, 1fr); }
   .callout-inner { grid-template-columns: 320px 1fr; }
