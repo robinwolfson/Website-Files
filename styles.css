@@ -99,6 +99,8 @@ h3 { font-size: 1.2rem; }
 #free-revit-sheet { scroll-margin-top: 5.5rem; }
 .lead-callout { max-width: 46rem; }
 #free-revit-sheet .note { margin-bottom: .35rem; }
+#free-revit-sheet .lead-download { margin: .85rem 0 1rem; }
+#free-revit-sheet .lead-or { margin: 0 0 .75rem; }
 .lead-micro { font-size: .85rem; margin: 0; }
 
 /* MailerLite embed sits in a light panel so the field stays readable on navy */
