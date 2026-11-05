@@ -91,10 +91,75 @@ h3 { font-size: 1.2rem; }
 
 /* Callout */
 .callout { background: var(--navy); color: #fff; border-top: 4px solid var(--accent); border-bottom: 4px solid var(--accent); }
+.callout + .callout { border-top-width: 0; }
 .callout h2 { color: #fff; }
 .callout p { color: #e6eaf3; }
 .callout-inner { display: grid; gap: 2rem; align-items: center; }
 .callout-inner img { border-radius: var(--radius); max-width: 360px; width: 100%; margin: 0 auto; }
+#free-revit-sheet { scroll-margin-top: 5.5rem; }
+.lead-callout { max-width: 46rem; }
+#free-revit-sheet .note { margin-bottom: .35rem; }
+.lead-micro { font-size: .85rem; margin: 0; }
+
+/* MailerLite embed sits in a light panel so the field stays readable on navy */
+.lead-form {
+  background: #fff;
+  color: var(--ink);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem .85rem;
+  margin: 1.15rem 0 .85rem;
+  max-width: 32rem;
+}
+.lead-form p,
+.lead-form label { color: var(--ink); }
+.lead-form .ml-embedded { min-height: 3.25rem; }
+.lead-form iframe { display: block; width: 100%; max-width: 100%; border: 0; }
+.lead-form input[type="email"],
+.lead-form input[type="text"] {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  padding: .75rem 1.1rem;
+  margin: 0 0 .65rem;
+}
+.lead-form input[type="email"]:focus-visible,
+.lead-form input[type="text"]:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+.lead-form button,
+.lead-form input[type="submit"] {
+  display: inline-block;
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--navy);
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  padding: .8rem 1.4rem;
+}
+.lead-form button:hover,
+.lead-form input[type="submit"]:hover,
+.lead-form button:focus-visible,
+.lead-form input[type="submit"]:focus-visible {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: var(--navy);
+}
+/* Form HTML is injected by MailerLite. Until that markup exists, don't show an empty panel. */
+.lead-form:has(.ml-embedded:empty) {
+  background: transparent;
+  border-color: transparent;
+  padding: 0;
+  margin-top: 0;
+}
+.lead-form:has(.ml-embedded:empty) .ml-embedded { min-height: 0; }
 
 /* About */
 .about-links { display: flex; flex-wrap: wrap; gap: 1rem; font-weight: 700; }
@@ -124,6 +189,7 @@ details p { margin: .6rem 0 0; }
   .preview-grid { grid-template-columns: repeat(3, 1fr); }
   .bundle-grid { grid-template-columns: repeat(3, 1fr); }
   .callout-inner { grid-template-columns: 320px 1fr; }
+  .callout-inner.lead-callout { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr auto; align-items: center; }
   .copyright { grid-column: 1 / -1; }
 }
